@@ -1,53 +1,40 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title> Rock-paper-scissors </title>
+        <meta charset="uf-8">
+        <title>Rock Paper Scissors Game</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="message1" >
-            <h2>Please select an option and play! </h2>
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+
+        <div class="score-board">
+            <div id="user-label" class="badge">user</div>
+            <div id="computer=label" class="badge">comp</div>
+            <span id="user-score">0</span>:<span id="computer-score"></span>
         </div>
-        <form>
-            <select id="options">
-                <option>Rock</option>
-                <option>Scissors</option>
-                <option>Paper</option>
-            </select>
-            <input type="button" value="battle" onclick="myGame()">
-        </form>
-    <script>
-        function myGame() {
-            var myte = documet.getElementById("janken").selectedIndex;
-            var cpunum = Math.floor(Math.random()*3);
-            var cpuhand;
-            var judge;
 
-            if(cpunum == 0){
-                cpuhand =="Rock";   
-            } else if(cpunum == 1) {
-                cpuhand = "Scissors";
-            } else if(cpunum == 2) {
-                cpuhand == "Paper";
-            }
+        <div class="result">
+            <p>Paper covers rock. You win!</p>
+        </div>
 
-            if(myte == 0 && cpunum == 1) {
-                judge = "You win!";
-            } else if(myte == 1 && cpunum == 2){
-                judge = "You win!";
-            } else if(myte == 2 && cpunum == 0){
-                judge = "You win!";
-            } else if(myte == cpunum) {
-                judge = "draw";
-            } else {
-                judge = "You lose";
-            }
+        <div class="choices">
+            <div class="choice" id="r">
+            <img src="http://www.rockyespy.com/Code%20and%20Functions/Game%20-%20Rock%20Paper%20Scissors/images/rock.png" alt="">
+            </div>
 
-            document.getElementById("message1").innerHTML = "<h2>" + cpuhand + "</h2">;
-            document.getElementById("message2").innerHTML = "<h3>" + judge + "</h2>";
+            <div class="choice" id="s">
+            <img src="http://www.rockyespy.com/Code%20and%20Functions/Game%20-%20Rock%20Paper%20Scissors/images/scissors.png" alt="">
+            </div>
 
-        }
-    </script>
+            <div class="choice" id="p">
+            <img src="https://sitejerk.com/images/rock-paper-scissors-png-2.png" alt="">
+            </div>
+        </div>
+
+        <p id="action-message">Make your move</p>
 
     </body>
-    </html>
+</html>

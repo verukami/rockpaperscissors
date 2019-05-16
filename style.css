@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizig: border-box;
+}
+
+background-color: {
+    
+}
+
+header {
+    background: white;
+}
+
+header > h1 {
+    color; #25
+}
